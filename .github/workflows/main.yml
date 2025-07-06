@@ -1,7 +1,9 @@
 name: YouTube AutoUpload
 on:
+  workflow_dispatch:  # ये लाइन जरूरी है
   schedule:
-    - cron: '0 10 * * *'  # हर दिन सुबह 10 बजे IST
+    - cron: '0 10 * * *'
+  # हर दिन सुबह 10 बजे IST
 jobs:
   upload:
     runs-on: ubuntu-latest
